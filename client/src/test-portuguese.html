@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Portuguese Detection</title>
+    <script>
+        // Force Portuguese browser language for testing
+        Object.defineProperty(navigator, 'language', {
+            value: 'pt-BR',
+            writable: false
+        });
+        Object.defineProperty(navigator, 'languages', {
+            value: ['pt-BR', 'pt'],
+            writable: false
+        });
+        
+        // Redirect to main app
+        setTimeout(() => {
+            window.location.href = '/';
+        }, 100);
+    </script>
+</head>
+<body>
+    <p>Redirecionando para versão brasileira...</p>
+</body>
+</html>
